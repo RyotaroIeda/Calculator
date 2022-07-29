@@ -70,6 +70,12 @@ function clickbutton(target) {
       } else {
         result.innerHTML += target_value;
       } 
+  } else if (target_value == '.') {//小数点連続させない
+    if (result.innerHTML.includes('.')) {
+      target_value = '';
+    } else {
+      result.innerHTML += target_value;
+    }
   } else {//数字クリック
     if (result.innerHTML == '0') {//先頭に0を書かない
       result.innerHTML = target_value;
